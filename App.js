@@ -1,41 +1,34 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components/native';
-import GitFetch from './components/GitFetch';
-import GitDisplay from './components/GitDisplay';
-// import { Input } from './react-native';
+import ButtonApi from './components/ButtonApi';
+import ShakeApi from './components/ShakeApi';
+import { Button, View } from 'react-native';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import { NavigationContainer } from '@react-navigation/native';
 
 const Container = styled.View`
 	flex: 1;
-	background-color: darkgrey;
+	background-color: papayawhip;
 	justify-content: center;
 	align-items: center;
 `;
 
 const Title = styled.Text`
 	font-size: 24px;
-	color: black;
+	color: palevioletred;
 `;
+
+const Drawer = createDrawerNavigator();
 
 const App = () => {
 	return (
-		<Container>
-			<Avatar source={require('./assets/github.png')} />
-			<Title>GitHub timeline</Title>
-			<Title>Enter your GitHub username:</Title>
-			{/* <label htmlFor='username' */}
-			{/* <Input value {username}/> */}
-			{/* onChangeText={(text) => setMessage(text)} */} 
-		</Container>
+		<NavigationContainer>
+			<Drawer.Navigator initialRouteName='Button'>
+				<Drawer.Screen name='Button' component={ButtonApi} />
+				<Drawer.Screen name='Shake' component={ShakeApi} />
+			</Drawer.Navigator>
+		</NavigationContainer>
 	);
 };
-
-const Avatar = styled.Image`
-	width: 100px;
-	height: 100px;
-	background: darkgrey;
-	border-radius: 22px;
-	position: absolute;
-	top: 100px;
-`;
 
 export default App;
