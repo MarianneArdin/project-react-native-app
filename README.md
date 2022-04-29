@@ -1,12 +1,10 @@
 # Project React Native App 📱
 
-Replace this readme with your own information about your project.
+This was my first project using React Native and Expo and I chose to build a project teching APIs.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+## The challenge
 
-## The problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+It took me a while to get my head around components in React Native and fetching the APIs.
 
 ## View it live
 
